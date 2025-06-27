@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title th:text="${photographer.firstName + ' ' + photographer.lastName}">Профиль фотографа</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+    <style>
+        body {
+            background-color: #f8f4ff;
+            color: #4b3f72;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 2rem;
+        }
+        .btn-edit {
+            background-color: #cbb3ea;
+            color: #4b007d;
+        }
+        .btn-edit:hover {
+            background-color: #bba3da;
+        }
+        .btn-delete {
+            background-color: #eac1d3;
+            color: #80002a;
+        }
+        .btn-delete:hover {
+            background-color: #dca1b8;
+        }
+        h1 {
+            color: #6a5acd;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1 th:text="${photographer.firstName + ' ' + photographer.lastName}">Имя Фамилия</h1>
+    <p><strong>Специализация:</strong> <span th:text="${photographer.specialization}">Специализация</span></p>
+    <p><strong>Дата рождения:</strong> <span th:text="${photographer.birthDate}">Дата</span></p>
+    <p><strong>Контактная информация:</strong> <span th:text="${photographer.contactInfo}">Контакты</span></p>
+    <p><strong>Биография:</strong></p>
+    <p th:text="${photographer.biography}">Биография</p>
+
+    <div class="mt-4 d-flex gap-2">
+        <a th:href="@{'/photographers/edit/' + ${photographer.id}}" class="btn btn-edit">
+            <i class="bi bi-pencil"></i> Редактировать
+        </a>
+
+        <form th:action="@{'/photographers/delete/' + ${photographer.id}}" method="post" onsubmit="return confirm('Удалить фотографа?');">
+            <button type="submit" class="btn btn-delete">
+                <i class="bi bi-trash"></i> Удалить
+            </button>
+        </form>
+
+        <a href="/photographers" class="btn btn-secondary">Назад к списку</a>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

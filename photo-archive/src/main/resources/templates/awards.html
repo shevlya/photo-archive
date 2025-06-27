@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Награды</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f4ff;
+            color: #4b3f72;
+            margin: 0;
+            padding: 2em;
+        }
+
+        h1 {
+            color: #6a5acd;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(150, 120, 200, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 1em;
+            text-align: left;
+            border-bottom: 1px solid #e0d6f5;
+        }
+
+        th {
+            background-color: #e7dcf9;
+            color: #4b3f72;
+        }
+
+        tr:hover {
+            background-color: #f0e8ff;
+        }
+    </style>
+</head>
+<body>
+<h1>Список наград</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Категория</th>
+        <th>Дата награждения</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="award : ${awards}">
+        <td th:text="${award.name}">Название</td>
+        <td th:text="${award.category}">Категория</td>
+        <td th:text="${award.awardedAt}">Дата</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Добавить фотоработу</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f0f8;
+            color: #4b3b61;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #6c4f87;
+            text-align: center;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(100, 70, 120, 0.15);
+            max-width: 500px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #d9cdea;
+            border-radius: 8px;
+            background-color: #faf7fc;
+            color: #4b3b61;
+            font-size: 14px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-color: #bca4dd;
+            box-shadow: 0 0 4px rgba(130, 90, 170, 0.3);
+        }
+
+        button {
+            background-color: #b292d4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #a078c8;
+        }
+
+        .back-button {
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+            background-color: #e0d0f0;
+            color: #4b3b61;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            box-shadow: 0 2px 6px rgba(100, 70, 120, 0.1);
+        }
+
+        .back-button:hover {
+            background-color: #d1bce8;
+            color: #3a2b4c;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<h1>Добавить новую фотоработу</h1>
+
+<form th:action="@{/photoworks}" method="post">
+    <label>Название:
+        <input type="text" name="title" required />
+    </label>
+    <label>Дата создания:
+        <input type="date" name="creationDate" />
+    </label>
+    <label>Техника:
+        <input type="text" name="technique" />
+    </label>
+    <label>Описание:
+        <input type="text" name="description" />
+    </label>
+    <label>Путь к файлу:
+        <input type="text" name="filePath" />
+    </label>
+    <label>Статус:
+        <input type="text" name="status" />
+    </label>
+
+    <label>Фотограф:
+        <select name="photographerId" required>
+            <option value="" disabled selected>Выберите фотографа</option>
+            <option th:each="p : ${photographers}" th:value="${p.id}" th:text="${p.firstName + ' ' + p.lastName}"></option>
+        </select>
+    </label>
+
+    <label>Жанр:
+        <select name="genreId">
+            <option value="" disabled selected>Выберите жанр</option>
+            <option th:each="g : ${genres}" th:value="${g.id}" th:text="${g.name}"></option>
+        </select>
+    </label>
+
+    <button type="submit">Сохранить</button>
+</form>
+
+<a href="/photoworks" class="back-button">← Назад</a>
+</body>
+</html>
