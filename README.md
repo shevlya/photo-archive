@@ -135,7 +135,9 @@ java -jar target/photo-archive-0.0.1-SNAPSHOT.jar
 ![Фотоработы фотографов](screenshots/photowork/photowork-start-page.png)
 
 <details> <summary>Подробные скриншоты работы с фотоработами</summary>
-- Страница фоторабот
+  
+  - Страница фоторабот
+
 ![Фотоработы фотографов](screenshots/photowork/photowork-start-page.png)
 
 - Форма добавления
@@ -156,7 +158,9 @@ java -jar target/photo-archive-0.0.1-SNAPSHOT.jar
 https://screenshots/exhibitions/exhibitions-main-page.png
 
 <details> <summary>Подробные скриншоты работы с выставками</summary>
-- Список выставок
+  
+  - Список выставок
+
 https://screenshots/exhibitions/exhibitions-main-page.png
 
 - Просмотр выставки (кнопка «Подробнее»)
@@ -182,67 +186,72 @@ https://screenshots/exhibitions/exhibitions-create-new-show.png
 ### Управление жанрами   
 Кратко: список, редактирование, удаление, добавление с проверкой уникальности.
 
-https://screenshots/genres/genres-main-page.png
+![Список жанров](screenshots/genres/genres-main-page.png) 
 
-<details> <summary>📸 Подробные скриншоты работы с жанрами</summary>
-- Список жанров
-https://screenshots/genres/genres-main-page.png
+<details> <summary>Подробные скриншоты работы с жанрами</summary>
+  
+  - Список жанров
+![Список жанров](screenshots/genres/genres-main-page.png) 
 
 Редактирование: меняем «Натюрморт» на «Ноктюрн»
-https://screenshots/genres/genres-edit-natur.png
-https://screenshots/genres/genres-edit-fail.png
-https://screenshots/genres/genres-edit-fail-show.png
+![Страница редактирования жанра](screenshots/genres/genres-edit-natur.png)   
+![Слово с ошибкой написали](screenshots/genres/genres-edit-fail.png)   
+![Результат изменения слова](screenshots/genres/genres-edit-fail-show.png)  
 
 - Возврат к правильному названию
-https://screenshots/genres/genres-edit-fail-show-up.png
+![Вернули обратно слово](screenshots/genres/genres-edit-fail-show-up.png)   
 
 - Удаление жанра (подтверждение)
-https://screenshots/genres/genres-delete-proof.png
+![Форма подтверждения удаления жанра](screenshots/genres/genres-delete-proof.png)   
 
 - Добавление существующего жанра (ошибка)
-https://screenshots/genres/genres-create-warning-db.png
+![Создаём жанр, который уже есть в таблице](screenshots/genres/genres-create-warning-db.png)   
 
 - Добавление нового жанра («Интерьер»)
-https://screenshots/genres/genres-create-good.png
+![Создан новый жанр](screenshots/genres/genres-create-good.png)
 
 </details>
 
 ### Профиль пользователя   
 Кратко: изменение имени и фамилии с валидацией (только буквы).
 
-https://screenshots/profile/profile-edit.png
+![Редактировать профиль страница](screenshots/profile/profile-edit.png)   
 
 <details> <summary>Подробные скриншоты профиля</summary>
-- Страница редактирования
-https://screenshots/profile/profile-edit.png
+  
+  - Страница редактирования
+
+![Редактировать профиль страница](screenshots/profile/profile-edit.png)   
 
 - Ошибка при вводе цифр в имя/фамилию
-https://screenshots/profile/profile-edit-name-surname-fail.png
+![В имени пользователя есть цифры](screenshots/profile/profile-edit-name-surname-fail.png)  
 
 - Данные в БД до изменения
-https://screenshots/profile/profile-table.png
+![Изменение имени и фамилии пользователя](screenshots/profile/profile-table.png)   
 
 - Данные в БД после изменения
-https://screenshots/profile/profile-table-up.png
+![Показываем изменение имени и фамилии](screenshots/profile/profile-table-up.png)
 
 </details>
 
 ### Регистрация пользователя
 Кратко: форма регистрации, валидация, проверка уникальности email.
 
-https://screenshots/register/register.png
+![Страница регистрации пользователя](screenshots/register/register.png)   
 
 <details> <summary>Подробные скриншоты регистрации</summary>
-- Страница регистрации
-https://screenshots/register/register.png
+  
+  - Страница регистрации
+
+![Страница регистрации пользователя](screenshots/register/register.png)   
 
 - Ошибки валидации (некорректные данные)
-https://screenshots/register/register-fail.png
+![Ошибки в полях заполнения](screenshots/register/register-fail.png) 
 
 - Попытка использовать существующий email
-https://screenshots/register/register-fail-no-uniq.png
+![Повторение почты](screenshots/register/register-fail-no-uniq.png)  
 
 - Успешная регистрация
-https://screenshots/register/register-good.png
+![Успешная регистрация](screenshots/register/register-good.png)
 
 </details>
