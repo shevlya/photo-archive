@@ -155,31 +155,31 @@ java -jar target/photo-archive-0.0.1-SNAPSHOT.jar
 ### Управление выставками
 Кратко: список выставок, просмотр, добавление/удаление фоторабот.
 
-https://screenshots/exhibitions/exhibitions-main-page.png
+![Старица выставок. Список выстовок](screenshots/exhibitions/exhibitions-main-page.png) 
 
 <details> <summary>Подробные скриншоты работы с выставками</summary>
   
   - Список выставок
 
-https://screenshots/exhibitions/exhibitions-main-page.png
+![Старица выставок. Список выстовок](screenshots/exhibitions/exhibitions-main-page.png) 
 
 - Просмотр выставки (кнопка «Подробнее»)
-https://screenshots/exhibitions/exhibitions-info-click.png
+![Страница с информацией о выставке](screenshots/exhibitions/exhibitions-info-click.png)   
 
 - Добавление работы в выставку (выпадающий список)
-https://screenshots/exhibitions/exhibitions-info-insert.png
-https://screenshots/exhibitions/exhibitions-info-insert-done.png
+![Список добавления фотоработы](screenshots/exhibitions/exhibitions-info-insert.png)   
+![Добавлена фоторабота](screenshots/exhibitions/exhibitions-info-insert-done.png)  
 
 - Удаление работы с подтверждением
-https://screenshots/exhibitions/exhibitions-info-delete-proof.png
-https://screenshots/exhibitions/exhibitions-info-delete-proof-yes.png
+![Удаление работы окно проверка](screenshots/exhibitions/exhibitions-info-delete-proof.png)   
+![Удаление работы, согласие на удаление](screenshots/exhibitions/exhibitions-info-delete-proof-yes.png)  
 
 - Итоговый список после изменений
-https://screenshots/exhibitions/exhibitions-info-delete-insert-insert-show.png
+![Результат после внесённых изменений](screenshots/exhibitions/exhibitions-info-delete-insert-insert-show.png)   
 
 - Создание новой выставки
-https://screenshots/exhibitions/exhibitions-create.png
-https://screenshots/exhibitions/exhibitions-create-new-show.png
+![Добавление выставки](screenshots/exhibitions/exhibitions-create.png)   
+![Добавление выставки демонстраци](screenshots/exhibitions/exhibitions-create-new-show.png)
 
 </details>
 
