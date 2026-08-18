@@ -47,211 +47,453 @@ java -jar target/photo-archive-0.0.1-SNAPSHOT.jar
 - **Редактирование профиля** – изменение имени и фамилии.
 
 ## Демонстрация работы приложения
-Ниже приведены ключевые сценарии.
-Разверните спойлер, чтобы увидеть детали.
+Ниже приведены ключевые сценарии. Разверните спойлер, чтобы увидеть детали.
+
+---
 
 ### Авторизация пользователя
 Кратко: форма входа, проверка существования пользователя, валидация email, проверка пароля.
 
-![Форма с корректными данными перед отправкой](screenshots/auth/auth-form-filled-valid.png)
+<p align="center">
+  <img src="screenshots/auth/auth-form-filled-valid.png" alt="Форма входа с корректными данными" width="500"/>
+  <br/>
+  <em>Рисунок 1. Форма с корректными данными перед отправкой</em>
+</p>
 
-<details> <summary>Подробные скриншоты авторизации (ошибки, валидация)</summary>
+<details>
+<summary>Подробные скриншоты авторизации (ошибки, валидация)</summary>
 
-  - Форма входа    
+<br/>
 
-![Форма входа email/пароль](screenshots/auth/auth-dialog.png)
+#### Форма входа
+<p align="center">
+  <img src="screenshots/auth/auth-dialog.png" alt="Форма входа email/пароль" width="400"/>
+  <br/>
+  <em>Рисунок 2. Форма входа email/пароль</em>
+</p>
 
-- Попытка войти с несуществующим email
-![Форма входа email отсутствует в БД только заполнение полей](screenshots/auth/auth-form-filled-unsubmitted.png)
-![Форма входа email отсутствует в БД](screenshots/auth/auth-email-validation-error.png)   
+#### Попытка войти с несуществующим email
+<p align="center">
+  <img src="screenshots/auth/auth-form-filled-unsubmitted.png" alt="Форма входа до отправки" width="400"/>
+  <br/>
+  <em>Рисунок 3. Только заполнение полей</em>
+</p>
 
-- Валидация формата email
-![Форма входа email написан без @](screenshots/auth/auth-user-not-found-with-bad-email.png)   
-![Форма входа email введён без домена](screenshots/auth/auth-email-error-missing-domain.png)   
+<p align="center">
+  <img src="screenshots/auth/auth-email-validation-error.png" alt="Email отсутствует в БД" width="400"/>
+  <br/>
+  <em>Рисунок 4. Email отсутствует в БД</em>
+</p>
 
-- Неправильный пароль
-![Форма входа неправильный пароль пользователя](screenshots/auth/auth-wrong-password.png)   
+#### Валидация формата email
+<p align="center">
+  <img src="screenshots/auth/auth-user-not-found-with-bad-email.png" alt="Email без @" width="400"/>
+  <br/>
+  <em>Рисунок 5. Email написан без @</em>
+</p>
 
-- Успешный вход (данные корректны)
-![Форма с корректными данными перед отправкой](screenshots/auth/auth-form-filled-valid.png)  
+<p align="center">
+  <img src="screenshots/auth/auth-email-error-missing-domain.png" alt="Email без домена" width="400"/>
+  <br/>
+  <em>Рисунок 6. Email введён без домена</em>
+</p>
+
+#### Неправильный пароль
+<p align="center">
+  <img src="screenshots/auth/auth-wrong-password.png" alt="Неправильный пароль" width="400"/>
+  <br/>
+  <em>Рисунок 7. Неправильный пароль пользователя</em>
+</p>
+
+#### Успешный вход
+<p align="center">
+  <img src="screenshots/auth/auth-form-filled-valid.png" alt="Успешный вход" width="500"/>
+  <br/>
+  <em>Рисунок 8. Форма с корректными данными перед отправкой</em>
+</p>
 
 </details>
+
+---
 
 ### Управление фотографами (CRUD)
 Кратко: список фотографов, добавление, редактирование, удаление.
 
-![Список фотографов](screenshots/photographers/home-photographers-list.png)  
+<p align="center">
+  <img src="screenshots/photographers/home-photographers-list.png" alt="Список фотографов" width="700"/>
+  <br/>
+  <em>Рисунок 9. Список фотографов</em>
+</p>
 
-<details> <summary>Подробные скриншоты работы с фотографами</summary>
-Добавление:
+<details>
+<summary>Подробные скриншоты работы с фотографами</summary>
 
-- Исходное состояние таблицы в БД (7 записей)
-![Таблица `photographer` до добавления записей](screenshots/photographers/photographers-table-before-insert.png)   
+<br/>
 
-- Форма добавления
-![Форма для добавления нового фотографа](screenshots/photographers/photographers-form-create-new.png)   
-![Форма для добавления нового фотографа с заполненными данными](screenshots/photographers/photographers-form-completed.png)   
+#### Добавление
 
-- Таблица после добавления (8 записей)
-![Таблица `photographer` после добавления записей](screenshots/photographers/photographers-table-after-insert.png)   
+<p align="center">
+  <img src="screenshots/photographers/photographers-table-before-insert.png" alt="Таблица до добавления" width="700"/>
+  <br/>
+  <em>Рисунок 10. Таблица <code>photographer</code> до добавления записей (7 записей)</em>
+</p>
 
-- Обновлённый список на главной
-![Обновлённый список фотографов](screenshots/photographers/home-photographers-list-after-insert.png)   
+<p align="center">
+  <img src="screenshots/photographers/photographers-form-create-new.png" alt="Форма добавления" width="500"/>
+  <br/>
+  <em>Рисунок 11. Форма для добавления нового фотографа</em>
+</p>
 
-Редактирование:
+<p align="center">
+  <img src="screenshots/photographers/photographers-form-completed.png" alt="Заполненная форма" width="500"/>
+  <br/>
+  <em>Рисунок 12. Форма с заполненными данными</em>
+</p>
 
-- Карточка фотографа с действиями
-![Просмотр карточки фотографа Александра Абаза](screenshots/photographers/photographer-profile-with-actions.png)   
+<p align="center">
+  <img src="screenshots/photographers/photographers-table-after-insert.png" alt="Таблица после добавления" width="700"/>
+  <br/>
+  <em>Рисунок 13. Таблица <code>photographer</code> после добавления (8 записей)</em>
+</p>
 
-- Форма редактирования
-![Форма для редактирования данных фотографа](screenshots/photographers/photographers-form-edit.png) 
+<p align="center">
+  <img src="screenshots/photographers/home-photographers-list-after-insert.png" alt="Обновлённый список" width="700"/>
+  <br/>
+  <em>Рисунок 14. Обновлённый список фотографов</em>
+</p>
 
-- Меняем имя на «Саша»
-![Форма с изменённым именем, без сохранения](screenshots/photographers/photographer-edit-name.png)
+#### Редактирование
 
-- Результат на странице
-![Просмотр карточки фотографа Александра Абаза с изменённым именем](screenshots/photographers/photographer-after-edit-name.png) 
+<p align="center">
+  <img src="screenshots/photographers/photographer-profile-with-actions.png" alt="Карточка фотографа" width="500"/>
+  <br/>
+  <em>Рисунок 15. Просмотр карточки фотографа Александра Абаза</em>
+</p>
 
-- Проверка в БД: временные таблицы
-![Временные таблицы для демонстрации обновления данных](screenshots/photographers/photographers-tables-changing-name.png)   
-![Обновленная таблица фотограф](screenshots/photographers/photographers-tables-changing-name-all.png)   
+<p align="center">
+  <img src="screenshots/photographers/photographers-form-edit.png" alt="Форма редактирования" width="500"/>
+  <br/>
+  <em>Рисунок 16. Форма для редактирования данных фотографа</em>
+</p>
 
-Удаление:
+<p align="center">
+  <img src="screenshots/photographers/photographer-edit-name.png" alt="Изменение имени" width="500"/>
+  <br/>
+  <em>Рисунок 17. Форма с изменённым именем, без сохранения</em>
+</p>
 
-- Буферная карточка для удаления
-![Буферная карточка для демонстрации удаления](screenshots/photographers/photographer-show-delete.png) 
+<p align="center">
+  <img src="screenshots/photographers/photographer-after-edit-name.png" alt="Результат редактирования" width="500"/>
+  <br/>
+  <em>Рисунок 18. Карточка фотографа с изменённым именем</em>
+</p>
 
-- Нажатие «Удалить»
-![Нажатие на кнопку удалить](screenshots/photographers/photographer-show-delete-click.png)   
+<p align="center">
+  <img src="screenshots/photographers/photographers-tables-changing-name.png" alt="Временные таблицы" width="700"/>
+  <br/>
+  <em>Рисунок 19. Временные таблицы для демонстрации обновления данных</em>
+</p>
 
-- Подтверждение удаления
-![Окно подтверждения удаления](screenshots/photographers/photographer-show-delete-click-proof.png)
+<p align="center">
+  <img src="screenshots/photographers/photographers-tables-changing-name-all.png" alt="Обновлённая таблица" width="700"/>
+  <br/>
+  <em>Рисунок 20. Обновлённая таблица photographer</em>
+</p>
+
+#### Удаление
+
+<p align="center">
+  <img src="screenshots/photographers/photographer-show-delete.png" alt="Буферная карточка" width="500"/>
+  <br/>
+  <em>Рисунок 21. Буферная карточка для демонстрации удаления</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/photographers/photographer-show-delete-click.png" alt="Нажатие Удалить" width="500"/>
+  <br/>
+  <em>Рисунок 22. Нажатие на кнопку «Удалить»</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/photographers/photographer-show-delete-click-proof.png" alt="Подтверждение удаления" width="500"/>
+  <br/>
+  <em>Рисунок 23. Окно подтверждения удаления</em>
+</p>
 
 </details>
+
+---
 
 ### Управление фотоработами
 Кратко: список работ, добавление с выбором фотографа и жанра.
 
-![Фотоработы фотографов](screenshots/photowork/photowork-start-page.png)
+<p align="center">
+  <img src="screenshots/photowork/photowork-start-page.png" alt="Фотоработы" width="700"/>
+  <br/>
+  <em>Рисунок 24. Фотоработы фотографов</em>
+</p>
 
-<details> <summary>Подробные скриншоты работы с фотоработами</summary>
-  
-  - Страница фоторабот
+<details>
+<summary>Подробные скриншоты работы с фотоработами</summary>
 
-![Фотоработы фотографов](screenshots/photowork/photowork-start-page.png)
+<br/>
 
-- Форма добавления
-![Форма для добавление фотоработы](screenshots/photowork/photowork-create-new.png)
-![Заполненная форма с фотоработой](screenshots/photowork/photowork-create-full.png)   
+<p align="center">
+  <img src="screenshots/photowork/photowork-start-page.png" alt="Страница фоторабот" width="700"/>
+  <br/>
+  <em>Рисунок 25. Страница фоторабот</em>
+</p>
 
-- Добавленная работа в списке
-![Добавленная работа Александра Абаза](screenshots/photowork/photowork-create-show.png)
+<p align="center">
+  <img src="screenshots/photowork/photowork-create-new.png" alt="Форма добавления фотоработы" width="500"/>
+  <br/>
+  <em>Рисунок 26. Форма для добавления фотоработы</em>
+</p>
 
-- Проверка изменения имени фотографа (Саша)
-![Фотоработы смотрим на изменение имени фотографа Саша Абаза](screenshots/photowork/photowork-sasha-abaza.png) 
+<p align="center">
+  <img src="screenshots/photowork/photowork-create-full.png" alt="Заполненная форма" width="500"/>
+  <br/>
+  <em>Рисунок 27. Заполненная форма с фотоработой</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/photowork/photowork-create-show.png" alt="Добавленная работа" width="700"/>
+  <br/>
+  <em>Рисунок 28. Добавленная работа Александра Абаза</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/photowork/photowork-sasha-abaza.png" alt="Проверка изменения имени" width="700"/>
+  <br/>
+  <em>Рисунок 29. Проверка изменения имени фотографа Саша Абаза</em>
+</p>
 
 </details>
+
+---
 
 ### Управление выставками
 Кратко: список выставок, просмотр, добавление/удаление фоторабот.
 
-![Старица выставок. Список выстовок](screenshots/exhibitions/exhibitions-main-page.png) 
+<p align="center">
+  <img src="screenshots/exhibitions/exhibitions-main-page.png" alt="Список выставок" width="700"/>
+  <br/>
+  <em>Рисунок 30. Страница выставок. Список выставок</em>
+</p>
 
-<details> <summary>Подробные скриншоты работы с выставками</summary>
-  
-  - Список выставок
+<details>
+<summary>Подробные скриншоты работы с выставками</summary>
 
-![Старица выставок. Список выстовок](screenshots/exhibitions/exhibitions-main-page.png) 
+<br/>
 
-- Просмотр выставки (кнопка «Подробнее»)
-![Страница с информацией о выставке](screenshots/exhibitions/exhibitions-info-click.png)   
+<p align="center">
+  <img src="screenshots/exhibitions/exhibitions-main-page.png" alt="Список выставок" width="700"/>
+  <br/>
+  <em>Рисунок 31. Список выставок</em>
+</p>
 
-- Добавление работы в выставку (выпадающий список)
-![Список добавления фотоработы](screenshots/exhibitions/exhibitions-info-insert.png)   
-![Добавлена фоторабота](screenshots/exhibitions/exhibitions-info-insert-done.png)  
+<p align="center">
+  <img src="screenshots/exhibitions/exhibitions-info-click.png" alt="Просмотр выставки" width="500"/>
+  <br/>
+  <em>Рисунок 32. Страница с информацией о выставке (кнопка «Подробнее»)</em>
+</p>
 
-- Удаление работы с подтверждением
-![Удаление работы окно проверка](screenshots/exhibitions/exhibitions-info-delete-proof.png)   
-![Удаление работы, согласие на удаление](screenshots/exhibitions/exhibitions-info-delete-proof-yes.png)  
+<p align="center">
+  <img src="screenshots/exhibitions/exhibitions-info-insert.png" alt="Список добавления фотоработы" width="500"/>
+  <br/>
+  <em>Рисунок 33. Добавление работы в выставку (выпадающий список)</em>
+</p>
 
-- Итоговый список после изменений
-![Результат после внесённых изменений](screenshots/exhibitions/exhibitions-info-delete-insert-insert-show.png)   
+<p align="center">
+  <img src="screenshots/exhibitions/exhibitions-info-insert-done.png" alt="Добавлена фоторабота" width="500"/>
+  <br/>
+  <em>Рисунок 34. Добавлена фоторабота</em>
+</p>
 
-- Создание новой выставки
-![Добавление выставки](screenshots/exhibitions/exhibitions-create.png)   
-![Добавление выставки демонстраци](screenshots/exhibitions/exhibitions-create-new-show.png)
+<p align="center">
+  <img src="screenshots/exhibitions/exhibitions-info-delete-proof.png" alt="Удаление работы" width="500"/>
+  <br/>
+  <em>Рисунок 35. Удаление работы — окно проверки</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/exhibitions/exhibitions-info-delete-proof-yes.png" alt="Подтверждение удаления" width="500"/>
+  <br/>
+  <em>Рисунок 36. Удаление работы — согласие на удаление</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/exhibitions/exhibitions-info-delete-insert-insert-show.png" alt="Итоговый список" width="700"/>
+  <br/>
+  <em>Рисунок 37. Итоговый список после изменений</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/exhibitions/exhibitions-create.png" alt="Создание выставки" width="500"/>
+  <br/>
+  <em>Рисунок 38. Добавление выставки</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/exhibitions/exhibitions-create-new-show.png" alt="Создание выставки (результат)" width="700"/>
+  <br/>
+  <em>Рисунок 39. Добавление выставки — результат</em>
+</p>
 
 </details>
 
-### Управление жанрами   
+---
+
+### Управление жанрами
 Кратко: список, редактирование, удаление, добавление с проверкой уникальности.
 
-![Список жанров](screenshots/genres/genres-main-page.png) 
+<p align="center">
+  <img src="screenshots/genres/genres-main-page.png" alt="Список жанров" width="700"/>
+  <br/>
+  <em>Рисунок 40. Список жанров</em>
+</p>
 
-<details> <summary>Подробные скриншоты работы с жанрами</summary>
-  
-  - Список жанров
-![Список жанров](screenshots/genres/genres-main-page.png) 
+<details>
+<summary>Подробные скриншоты работы с жанрами</summary>
 
-Редактирование: меняем «Натюрморт» на «Ноктюрн»
-![Страница редактирования жанра](screenshots/genres/genres-edit-natur.png)   
-![Слово с ошибкой написали](screenshots/genres/genres-edit-fail.png)   
-![Результат изменения слова](screenshots/genres/genres-edit-fail-show.png)  
+<br/>
 
-- Возврат к правильному названию
-![Вернули обратно слово](screenshots/genres/genres-edit-fail-show-up.png)   
+<p align="center">
+  <img src="screenshots/genres/genres-main-page.png" alt="Список жанров" width="700"/>
+  <br/>
+  <em>Рисунок 41. Список жанров</em>
+</p>
 
-- Удаление жанра (подтверждение)
-![Форма подтверждения удаления жанра](screenshots/genres/genres-delete-proof.png)   
+#### Редактирование (меняем «Натюрморт» на «Ноктюрн»)
 
-- Добавление существующего жанра (ошибка)
-![Создаём жанр, который уже есть в таблице](screenshots/genres/genres-create-warning-db.png)   
+<p align="center">
+  <img src="screenshots/genres/genres-edit-natur.png" alt="Страница редактирования" width="500"/>
+  <br/>
+  <em>Рисунок 42. Страница редактирования жанра</em>
+</p>
 
-- Добавление нового жанра («Интерьер»)
-![Создан новый жанр](screenshots/genres/genres-create-good.png)
+<p align="center">
+  <img src="screenshots/genres/genres-edit-fail.png" alt="Ошибка написания" width="500"/>
+  <br/>
+  <em>Рисунок 43. Слово с ошибкой</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/genres/genres-edit-fail-show.png" alt="Результат изменения" width="700"/>
+  <br/>
+  <em>Рисунок 44. Результат изменения слова</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/genres/genres-edit-fail-show-up.png" alt="Возврат к правильному названию" width="700"/>
+  <br/>
+  <em>Рисунок 45. Возврат к правильному названию</em>
+</p>
+
+#### Удаление жанра
+
+<p align="center">
+  <img src="screenshots/genres/genres-delete-proof.png" alt="Подтверждение удаления" width="500"/>
+  <br/>
+  <em>Рисунок 46. Форма подтверждения удаления жанра</em>
+</p>
+
+#### Добавление жанра
+
+<p align="center">
+  <img src="screenshots/genres/genres-create-warning-db.png" alt="Ошибка дубликата" width="500"/>
+  <br/>
+  <em>Рисунок 47. Добавление существующего жанра (ошибка)</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/genres/genres-create-good.png" alt="Создание нового жанра" width="500"/>
+  <br/>
+  <em>Рисунок 48. Добавление нового жанра «Интерьер»</em>
+</p>
 
 </details>
 
-### Профиль пользователя   
+---
+
+### Профиль пользователя
 Кратко: изменение имени и фамилии с валидацией (только буквы).
 
-![Редактировать профиль страница](screenshots/profile/profile-edit.png)   
+<p align="center">
+  <img src="screenshots/profile/profile-edit.png" alt="Редактирование профиля" width="500"/>
+  <br/>
+  <em>Рисунок 49. Страница редактирования профиля</em>
+</p>
 
-<details> <summary>Подробные скриншоты профиля</summary>
-  
-  - Страница редактирования
+<details>
+<summary>Подробные скриншоты профиля</summary>
 
-![Редактировать профиль страница](screenshots/profile/profile-edit.png)   
+<br/>
 
-- Ошибка при вводе цифр в имя/фамилию
-![В имени пользователя есть цифры](screenshots/profile/profile-edit-name-surname-fail.png)  
+<p align="center">
+  <img src="screenshots/profile/profile-edit.png" alt="Страница редактирования" width="500"/>
+  <br/>
+  <em>Рисунок 50. Страница редактирования профиля</em>
+</p>
 
-- Данные в БД до изменения
-![Изменение имени и фамилии пользователя](screenshots/profile/profile-table.png)   
+<p align="center">
+  <img src="screenshots/profile/profile-edit-name-surname-fail.png" alt="Ошибка валидации" width="500"/>
+  <br/>
+  <em>Рисунок 51. Ошибка при вводе цифр в имя/фамилию</em>
+</p>
 
-- Данные в БД после изменения
-![Показываем изменение имени и фамилии](screenshots/profile/profile-table-up.png)
+<p align="center">
+  <img src="screenshots/profile/profile-table.png" alt="Данные в БД до изменения" width="700"/>
+  <br/>
+  <em>Рисунок 52. Данные в БД до изменения</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/profile/profile-table-up.png" alt="Данные в БД после изменения" width="700"/>
+  <br/>
+  <em>Рисунок 53. Данные в БД после изменения</em>
+</p>
 
 </details>
+
+---
 
 ### Регистрация пользователя
 Кратко: форма регистрации, валидация, проверка уникальности email.
 
-![Страница регистрации пользователя](screenshots/register/register.png)   
+<p align="center">
+  <img src="screenshots/register/register.png" alt="Страница регистрации" width="500"/>
+  <br/>
+  <em>Рисунок 54. Страница регистрации пользователя</em>
+</p>
 
-<details> <summary>Подробные скриншоты регистрации</summary>
-  
-  - Страница регистрации
+<details>
+<summary>Подробные скриншоты регистрации</summary>
 
-![Страница регистрации пользователя](screenshots/register/register.png)   
+<br/>
 
-- Ошибки валидации (некорректные данные)
-![Ошибки в полях заполнения](screenshots/register/register-fail.png) 
+<p align="center">
+  <img src="screenshots/register/register.png" alt="Страница регистрации" width="500"/>
+  <br/>
+  <em>Рисунок 55. Страница регистрации пользователя</em>
+</p>
 
-- Попытка использовать существующий email
-![Повторение почты](screenshots/register/register-fail-no-uniq.png)  
+<p align="center">
+  <img src="screenshots/register/register-fail.png" alt="Ошибки валидации" width="500"/>
+  <br/>
+  <em>Рисунок 56. Ошибки валидации (некорректные данные)</em>
+</p>
 
-- Успешная регистрация
-![Успешная регистрация](screenshots/register/register-good.png)
+<p align="center">
+  <img src="screenshots/register/register-fail-no-uniq.png" alt="Повторение email" width="500"/>
+  <br/>
+  <em>Рисунок 57. Попытка использовать существующий email</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/register/register-good.png" alt="Успешная регистрация" width="500"/>
+  <br/>
+  <em>Рисунок 58. Успешная регистрация</em>
+</p>
 
 </details>
