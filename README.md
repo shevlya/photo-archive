@@ -1,5 +1,9 @@
 # Photo Archive Application
 
+![Java](https://img.shields.io/badge/Java-21-orange)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.3-brightgreen)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-17-blue)
+
 ## Содержание
 - [Описание](#описание)
 - [Технологии](#технологии)
@@ -24,10 +28,6 @@
 - PostgreSQL
 - Thymeleaf
 - Hibernate
-
-![Java](https://img.shields.io/badge/Java-21-orange)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.5.3-brightgreen)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)
 
 ### Настройка базы данных
 - Создайте БД и пользователя
@@ -194,25 +194,3 @@ java -jar target/photo-archive-0.0.1-SNAPSHOT.jar
 Вводим корректные данные. Нажимаем кнопку "Зарегистрироваться". После нажатия нас вернёт на страницу "Вход".   
 Там пользователь введёт уже свои данные и попадёт на главную страницу, страницу с "Список фотографов"  
 ![Успешная регистрация](screenshots/register/register-good.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
