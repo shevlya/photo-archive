@@ -80,52 +80,52 @@ java -jar target/photo-archive-0.0.1-SNAPSHOT.jar
 ### Управление фотографами (CRUD)
 Кратко: список фотографов, добавление, редактирование, удаление.
 
-https://screenshots/photographers/home-photographers-list.png
+![Список фотографов](screenshots/photographers/home-photographers-list.png)  
 
 <details> <summary>Подробные скриншоты работы с фотографами</summary>
 Добавление:
 
 - Исходное состояние таблицы в БД (7 записей)
-https://screenshots/photographers/photographers-table-before-insert.png
+![Таблица `photographer` до добавления записей](screenshots/photographers/photographers-table-before-insert.png)   
 
 - Форма добавления
-https://screenshots/photographers/photographers-form-create-new.png
-https://screenshots/photographers/photographers-form-completed.png
+![Форма для добавления нового фотографа](screenshots/photographers/photographers-form-create-new.png)   
+![Форма для добавления нового фотографа с заполненными данными](screenshots/photographers/photographers-form-completed.png)   
 
 - Таблица после добавления (8 записей)
-https://screenshots/photographers/photographers-table-after-insert.png
+![Таблица `photographer` после добавления записей](screenshots/photographers/photographers-table-after-insert.png)   
 
 - Обновлённый список на главной
-https://screenshots/photographers/home-photographers-list-after-insert.png
+![Обновлённый список фотографов](screenshots/photographers/home-photographers-list-after-insert.png)   
 
 Редактирование:
 
 - Карточка фотографа с действиями
-https://screenshots/photographers/photographer-profile-with-actions.png
+![Просмотр карточки фотографа Александра Абаза](screenshots/photographers/photographer-profile-with-actions.png)   
 
 - Форма редактирования
-https://screenshots/photographers/photographers-form-edit.png
+![Форма для редактирования данных фотографа](screenshots/photographers/photographers-form-edit.png) 
 
 - Меняем имя на «Саша»
-https://screenshots/photographers/photographer-edit-name.png
+![Форма с изменённым именем, без сохранения](screenshots/photographers/photographer-edit-name.png)
 
 - Результат на странице
-https://screenshots/photographers/photographer-after-edit-name.png
+![Просмотр карточки фотографа Александра Абаза с изменённым именем](screenshots/photographers/photographer-after-edit-name.png) 
 
 - Проверка в БД: временные таблицы
-https://screenshots/photographers/photographers-tables-changing-name.png
-https://screenshots/photographers/photographers-tables-changing-name-all.png
+![Временные таблицы для демонстрации обновления данных](screenshots/photographers/photographers-tables-changing-name.png)   
+![Обновленная таблица фотограф](screenshots/photographers/photographers-tables-changing-name-all.png)   
 
 Удаление:
 
 - Буферная карточка для удаления
-https://screenshots/photographers/photographer-show-delete.png
+![Буферная карточка для демонстрации удаления](screenshots/photographers/photographer-show-delete.png) 
 
 - Нажатие «Удалить»
-https://screenshots/photographers/photographer-show-delete-click.png
+![Нажатие на кнопку удалить](screenshots/photographers/photographer-show-delete-click.png)   
 
 - Подтверждение удаления
-https://screenshots/photographers/photographer-show-delete-click-proof.png
+![Окно подтверждения удаления](screenshots/photographers/photographer-show-delete-click-proof.png)
 
 </details>
 
