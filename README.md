@@ -36,6 +36,7 @@
 ```bash
 mvn clean install
 java -jar target/photo-archive-0.0.1-SNAPSHOT.jar
+```
 
 ## Возможности приложения
 - **Управление фотографами** – добавление, редактирование, удаление, просмотр списка.
@@ -52,25 +53,27 @@ java -jar target/photo-archive-0.0.1-SNAPSHOT.jar
 ### Авторизация пользователя
 Кратко: форма входа, проверка существования пользователя, валидация email, проверка пароля.
 
-https://screenshots/auth/auth-form-filled-valid.png
+![Форма с корректными данными перед отправкой](screenshots/auth/auth-form-filled-valid.png)
 
 <details> <summary>Подробные скриншоты авторизации (ошибки, валидация)</summary>
-- Форма входа
-https://screenshots/auth/auth-dialog.png
+
+  - Форма входа    
+
+![Форма входа email/пароль](screenshots/auth/auth-dialog.png)
 
 - Попытка войти с несуществующим email
-https://screenshots/auth/auth-form-filled-unsubmitted.png
-https://screenshots/auth/auth-email-validation-error.png
+![Форма входа email отсутствует в БД только заполнение полей](screenshots/auth/auth-form-filled-unsubmitted.png)
+![Форма входа email отсутствует в БД](screenshots/auth/auth-email-validation-error.png)   
 
 - Валидация формата email
-https://screenshots/auth/auth-user-not-found-with-bad-email.png
-https://screenshots/auth/auth-email-error-missing-domain.png
+![Форма входа email написан без @](screenshots/auth/auth-user-not-found-with-bad-email.png)   
+![Форма входа email введён без домена](screenshots/auth/auth-email-error-missing-domain.png)   
 
 - Неправильный пароль
-https://screenshots/auth/auth-wrong-password.png
+![Форма входа неправильный пароль пользователя](screenshots/auth/auth-wrong-password.png)   
 
 - Успешный вход (данные корректны)
-https://screenshots/auth/auth-form-filled-valid.png
+![Форма с корректными данными перед отправкой](screenshots/auth/auth-form-filled-valid.png)  
 
 </details>
 
