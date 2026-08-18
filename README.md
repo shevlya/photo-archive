@@ -132,21 +132,21 @@ java -jar target/photo-archive-0.0.1-SNAPSHOT.jar
 ### Управление фотоработами
 Кратко: список работ, добавление с выбором фотографа и жанра.
 
-https://screenshots/photowork/photowork-start-page.png
+![Фотоработы фотографов](screenshots/photowork/photowork-start-page.png)
 
 <details> <summary>Подробные скриншоты работы с фотоработами</summary>
 - Страница фоторабот
-https://screenshots/photowork/photowork-start-page.png
+![Фотоработы фотографов](screenshots/photowork/photowork-start-page.png)
 
 - Форма добавления
-https://screenshots/photowork/photowork-create-new.png
-https://screenshots/photowork/photowork-create-full.png
+![Форма для добавление фотоработы](screenshots/photowork/photowork-create-new.png)
+![Заполненная форма с фотоработой](screenshots/photowork/photowork-create-full.png)   
 
 - Добавленная работа в списке
-https://screenshots/photowork/photowork-create-show.png
+![Добавленная работа Александра Абаза](screenshots/photowork/photowork-create-show.png)
 
 - Проверка изменения имени фотографа (Саша)
-https://screenshots/photowork/photowork-sasha-abaza.png
+![Фотоработы смотрим на изменение имени фотографа Саша Абаза](screenshots/photowork/photowork-sasha-abaza.png) 
 
 </details>
 
